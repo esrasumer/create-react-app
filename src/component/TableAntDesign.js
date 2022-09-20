@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import 'antd/dist/antd.css'
+import React, { useState } from 'react';
+import 'antd/dist/antd.css';
 import { Divider, Radio, Table } from 'antd';
 
 const columns = [
@@ -46,9 +46,9 @@ const data = [
 ]
 
 const rowSelection = {
-  // onChange: (selectedRowKeys, selectedRows) => {
-  //   console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
-  // },
+  onChange: (selectedRowKeys, selectedRows) => {
+    console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
+  },
   getCheckboxProps: (record) => ({
     disabled: record.name === 'Disabled User',
     // Column configuration not to be checked
@@ -67,7 +67,7 @@ function TableAntDesign() {
         value={selectionType}
       >
         <Radio value="checkbox">Checkbox</Radio>
-        {/* <Radio value="radio">radio</Radio> */}
+        <Radio value="radio">radio</Radio>
       </Radio.Group>
 
       <Divider />
@@ -84,4 +84,4 @@ function TableAntDesign() {
   )
 }
 
-export default TableAntDesign
+export default TableAntDesign;
